@@ -1,0 +1,55 @@
+@font-face {
+	font-family: 'icomoon-psycouncel';
+	src:url('fonts/icomoon-psycouncel.eot?-5v9lwj');
+	src:url('fonts/icomoon-psycouncel.eot?#iefix-5v9lwj') format('embedded-opentype'),
+		url('fonts/icomoon-psycouncel.woff?-5v9lwj') format('woff'),
+		url('fonts/icomoon-psycouncel.ttf?-5v9lwj') format('truetype'),
+		url('fonts/icomoon-psycouncel.svg?-5v9lwj#icomoon-psycouncel') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+	font-family: 'icomoon-psycouncel';
+	speak: none;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+
+	/* Better Font Rendering =========== */
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.icon-ico_01:before {
+	content: "\21";
+}
+.icon-ico_02:before {
+	content: "\22";
+}
+.icon-ico_03:before {
+	content: "\23";
+}
+.icon-ico_04:before {
+	content: "\24";
+}
+.icon-ico_05:before {
+	content: "\25";
+}
+.icon-ico_06:before {
+	content: "\26";
+}
+.icon-ico_07:before {
+	content: "\27";
+}
+.icon-ico_08:before {
+	content: "\28";
+}
+.icon-ico_09:before {
+	content: "\29";
+}
+.icon-ico_10:before {
+	content: "\2a";
+}
