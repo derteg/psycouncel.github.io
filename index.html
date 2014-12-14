@@ -1,28 +1,168 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>Главная :: psycouncel.ru</title>
-  <link rel="stylesheet" href="css/style.css">
-  <script src="js/script.js"></script>
-</head>
-<body>
-  <header id="header" class="b-header">
-    <div class="b-logo">
-      <span>testtesttest</span>
-    </div>
-    <nav class="b-nav">
-      <ul class="b-nav_list">
-        <li class="b-nav_item"><a href="#0" class="l-nav_lnk">О нас</a></li>
-        <li class="b-nav_item"><a href="#0" class="l-nav_lnk">Интервезионная группа</a></li>
-        <li class="b-nav_item"><a href="#0" class="l-nav_lnk">Статьи</a></li>
-        <li class="b-nav_item"><a href="#0" class="l-nav_lnk">Контакты</a></li>
-      </ul>
-    </nav>
-    <div class="b-callback_top">
-      <span class="text">Напишите нам</span>
-    </div>
-  </header>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Главная :: psycouncel.ru</title>
+        <meta name="description" content="">
+        <meta name="author" content="">
+        <meta name="viewport" content="width=1000">
+
+        <link rel="stylesheet" href="css/slick.css">
+        <link rel="stylesheet" href="css/style.css">
+
+        <script src="js/libs/jquery-1.11.1.min.js"></script>
+        <script src="js/libs/slick.min.js"></script>
+        <script src="js/script.js"></script>
+    </head>
+    <body>
+        <header id="header" class="b-header">
+            <div class="wrapper">
+                <div class="b-logo fl">
+                    <a class="b-logo_lnk" href="index.html"><img src="pic/logo.png" alt="" width="202" height="21"></a>
+                </div>
+                <div class="b-callback_top btn btn-1 fr">Напишите нам</div>
+                <nav class="b-nav">
+                    <ul class="b-nav_list">
+                        <li class="b-nav_item"><a href="#0" class="l-nav_lnk"><span class="txt"><em>О нас</em></span></a></li>
+                        <li class="b-nav_item"><a href="#0" class="l-nav_lnk current"><span class="txt"><em>Психологические мастерские</em></span></a></li>
+                        <li class="b-nav_item"><a href="#0" class="l-nav_lnk"><span class="txt"><em>Интервезионная группа</em></span></a></li>
+                        <li class="b-nav_item"><a href="#0" class="l-nav_lnk"><span class="txt"><em>Статьи</em></span></a></li>
+                        <li class="b-nav_item"><a href="#0" class="l-nav_lnk"><span class="txt"><em>Контакты</em></span></a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+
+        <main id="main" role="main">
+            <section class="b-content" id="main" role="main">
+                <div class="b-mainpromo">
+                    <div class="wrapper">
+                        <h1 class="l-content_title">Добро пожаловать на <span class="name">PSYCOUNSEL</span></h1>
+                        <div class="b-mainpromo_ico">
+                            <span class="icomoon">!</span>
+                        </div>
+                        <p class="b-mainpromo_subtxt">Сайт, созданный единомышленниками и партнерами, <br/>психоаналитически ориентированными консультирующими психологами 
+                            <span class="b-mainpromo_subtxt_person">
+                                <a href="#">Ольгой Валентиновной <span class="lastname">Чекунковой</span></a>
+                                и
+                                <a href="#">Натальей Васильевной <span class="lastname">Лужанской</span></a>
+                            </span>
+                        </p>
+                        <div class="b-mainpromo_next">
+                            <span class="icomoon">"</span>
+                        </div>
+                    </div>
+                </div><!-- b-mainpromo -->
+
+                <div class="b-person_promo">
+                    <div class="wrapper">
+                        <a href="#0" class="l-person_promo_lnk">
+                            <div class="l-person_pic">
+                                <img src="pic/pic_01.jpg" alt="" class="l-person_pic_dis" width="510" height="562">
+                                <img src="pic/pic_01_a.jpg" class="l-person_pic_h" alt=""  width="510"  height="562">
+                            </div>
+                            <div class="l-person_about larr">
+                                <h4 class="l-person_title">Ольга Чекункова</h4>
+                                <p class="l-person_subtitle">консультирующий психолог</p>
+                            </div>
+                        </a>
+                        <a href="#0" class="l-person_promo_lnk">
+                            <div class="l-person_pic">
+                                <img src="pic/pic_02.jpg" alt="" class="l-person_pic_dis" width="510" height="562">
+                                <img src="pic/pic_02_a.jpg" class="l-person_pic_h" alt="" width="510" height="562">
+                            </div>
+                            <div class="l-person_about rarr">
+                                <h4 class="l-person_title">Наталья Лужанская</h4>
+                                <p class="l-person_subtitle">консультирующий психолог</p>
+                            </div>
+                        </a>
+                    </div>
+                </div><!-- b-person_promo -->
+
+                <div class="b-skill">
+                    <div class="wrapper">
+                        <h2 class="b-teaser_title">Обращайтесь к нам, если у вас:</h2>
+                        <div class="b-skill_cols cols">
+                            <div class="b-skill_col col-3">
+                                <div class="l-skill_item">депрессии, фобические расстройства (страхи), тревожные расстройства;</div>
+                            </div>
+                            <div class="b-skill_col col-3">
+                                <div class="l-skill_item">сложности в отношениях (личных и профессиональных);</div>
+                                <div class="l-skill_item">зависимости;</div>
+                            </div>
+                            <div class="b-skill_col col-3">
+                                <div class="l-skill_item">жизненные кризисы;</div>
+                                <div class="l-skill_item">одиночество и неудовлетворенность жизнью</div>
+                            </div>
+                        </div>
+                        <div class="btn btn-2">Поможем найти выход</div>
+                    </div>
+                </div><!-- b-skill -->
+
+                <div class="b-princeps">
+                    <div class="wrapper">
+                        <h2 class="b-teaser_title">Наши принципы и ценности</h2>
+                        <div class="b-princeps_slider" id="mainPromoSlider">
+                            <div class="l-princeps_slide">
+                                <p class="l-princeps_ico"><span class="icomoon">&</span></p>
+                                <p class="l-princeps_text">
+                                    <i class="sub_title">Честность</i>
+                                    <span class="text">поддержание честных и открытых отношений с клиентом.</span>
+                                </p>
+                                <div class="l-princeps_btn btn btn-3">Читать о нашем подходе</div>
+                            </div>
+                            <div class="l-princeps_slide">
+                                <p class="l-princeps_ico"><span class="icomoon">&</span></p>
+                                <p class="l-princeps_text">
+                                    <i class="sub_title">Честность</i>
+                                    <span class="text">поддержание честных и открытых отношений с клиентом.</span>
+                                </p>
+                                <div class="l-princeps_btn btn btn-3">Читать о нашем подходе</div>
+                            </div>
+                            <div class="l-princeps_slide">
+                                <p class="l-princeps_ico"><span class="icomoon">&</span></p>
+                                <p class="l-princeps_text">
+                                    <i class="sub_title">Честность</i>
+                                    <span class="text">поддержание честных и открытых отношений с клиентом.</span>
+                                </p>
+                                <div class="l-princeps_btn btn btn-3">Читать о нашем подходе</div>
+                            </div>
+                        </div>
+                    </div>
+                </div><!-- b-princeps -->
+
+                <div class="b-responive">
+                    <div class="b-responsive_cols cols">
+                        <div class="b-responsive_col col-2">
+                            <div class="b-responsive_pic">
+                                <img src="pic/pic_03.jpg" alt="" width="963" height="700">
+                                <div class="b-responsive_pic_nav">
+                                    <div class="b-responsive_pic_wrap">
+                                        <h4 class="b-responsive_title"><span class="txt">Интервизионная группа</span></h4>
+                                        <div class="b-responsive_ico"><span class="icomoon">&</span></div>
+                                        <p class="b-responsive_txt">Небольшое количество информации об интервизионной группе</p>
+                                        <div class="b-responsive_btn btn btn-3">Информация о группе</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="b-responsive_col col-2">
+                            <div class="b-responsive_pic">
+                                    <img src="pic/pic_04.jpg" alt="" width="963" height="700">
+                                <div class="b-responsive_pic_nav">
+                                    <div class="b-responsive_pic_wrap">
+                                        <h4 class="b-responsive_title"><span class="txt">Психологические<br/> мастерские</span></h4>
+                                        <div class="b-responsive_ico"><span class="icomoon">&</span></div>
+                                        <p class="b-responsive_txt">Небольшое количество информации о психологических мастерских</p>
+                                        <div class="b-responsive_btn btn btn-3">Узнать больше</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div><!-- b-responive -->
+            </section>
+        </main>
 </body>
 </html>
