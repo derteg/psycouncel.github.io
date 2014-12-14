@@ -159,7 +159,7 @@ input[type="search"]{
 	word-spacing: 1px;
 	outline: none;
 	position: relative;
-	font-family: Arial, Helvetica, sans-serif;
+	font-family: Arial, 'Helvetica Neue', sans-serif;
 	-webkit-transition: all 0.3s;
 	-moz-transition: all 0.3s;
 	transition: all 0.3s;
@@ -167,6 +167,11 @@ input[type="search"]{
 .btn:after{
 	content: '';
 	position: absolute;
+	width: 100%;
+	height: 0;
+	top: 0;
+	left: 0;
+	z-index: -1;
 	-webkit-transition: all 0.3s;
 	-moz-transition: all 0.3s;
 	transition: all 0.3s;
@@ -181,10 +186,6 @@ input[type="search"]{
 	color: #d1b055;
 }
 .btn-1:after{
-	width: 100%;
-	height: 0;
-	top: 0;
-	left: 0;
 	background-color: #fff;
 }
 .btn-1:hover:after,
@@ -201,10 +202,6 @@ input[type="search"]{
 	color: #fff;
 }
 .btn-2:after{
-	width: 100%;
-	height: 0;
-	top: 0;
-	left: 0;
 	background-color: #d1b055;
 }
 .btn-2:hover:after,
@@ -221,10 +218,6 @@ input[type="search"]{
 	color: #fff;
 }
 .btn-3:after{
-	width: 100%;
-	height: 0;
-	top: 0;
-	left: 0;
 	background-color: #7459a5;
 }
 .btn-3:hover:after,
@@ -282,7 +275,7 @@ input[type="search"]{
 .l-nav_lnk .txt{
 	font-size: 12px;
 	text-transform: uppercase;
-	font-family: Arial, Helvetica, sans-serif;
+	font-family: Arial, 'Helvetica Neue', sans-serif;
 	display: inline-block;
 	line-height: 20px;
 }
@@ -572,3 +565,44 @@ input[type="search"]{
 	margin-top: 70px;
 }
 
+/* b-articles */
+.b-articles_cols{
+	margin-left: -44px;
+	margin-top: 78px;
+}
+.b-articles_col{
+	padding-left: 44px;
+}
+.l-articles_tag{
+	font-size: 14px;
+	line-height: 30px;
+	font-style: italic;
+}
+.b-articles_col.type-1 .l-articles_tag{
+	color: #d1b055;
+}
+.b-articles_col.type-2 .l-articles_tag{
+	color: #7459a5;
+}
+.l-articles_title{
+	font-size: 22px;
+	line-height: 30px;
+}
+.l-articles_date{
+	font-size: 12px;
+	line-height: 30px;
+	display: inline-block;
+}
+.b-articles_col.type-1 .l-articles_date{
+	border-bottom: 3px solid #d1b055;
+}
+.b-articles_col.type-2 .l-articles_date{
+	border-bottom: 3px solid #7459a5;
+}
+.l-articles_txt{
+	color: #333;
+	font: normal 13px/20px Arial, 'Helvetica Neue', sans-serif;
+}
+.l-articles_btn{
+	text-align: center;
+}
