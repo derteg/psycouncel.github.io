@@ -638,9 +638,11 @@ input[type="search"]{
 
 /* b-footer */
 .b-footer{
-	min-width: 1260px;
-	margin: 0 auto;
 	bottom: 0;
+}
+.b-footer_wrap{
+	max-width: 1260px;
+	margin: 0 auto;
 }
 .b-footer_cols{
 	background-color: #fff;	
@@ -709,6 +711,7 @@ input[type="search"]{
 	line-height: 26px;
 }
 .b-footer_bottom{
+	background-color: #fff;
 	padding: 58px 0 50px 40px;
 	font-size: 14px;
 	text-transform: uppercase;
