@@ -5,7 +5,8 @@ $(function(){
 	$('.js-person_popup').personPopUp();
 	$(window).on('load resize', function(){
 		$('.js-height_adjustment').heightAdjustment();
-	})
+	});
+	$('.js-header_fix').menuFixed();
 });
 
 (function($){
@@ -32,47 +33,29 @@ $(function(){
 		    var map;
 		    function init() {
 		        var mapOptions = {
+		        	zoom: 16,
 		            center: new google.maps.LatLng(55.7583379, 37.6266889),
-		            zoom: 16,
-		            zoomControl: false,
-		            disableDoubleClickZoom: true,
-		            mapTypeControl: false,
-		            scaleControl: false,
-		            scrollwheel: false,
-		            panControl: false,
-		            streetViewControl: false,
-		            draggable : true,
-		            overviewMapControl: false,
-		            overviewMapControlOptions: {
-		                opened: false,
-		            },
-		            mapTypeId: google.maps.MapTypeId.ROADMAP,
+		            zoomControl: true,
+	                zoomControlOptions: {
+	                  style: google.maps.ZoomControlStyle.SMALL
+	                },
+                    scrollwheel: false,
+      				disableDefaultUI: true,
+                    mapTypeId: google.maps.MapTypeId.ROADMAP,
 		            styles: [{    featureType: 'all',  stylers: [{saturation: -100},{gamma: 0.50}  ]}  ],
 		        }
 		        var mapElement = document.getElementById('footer_gmap');
 		        var map = new google.maps.Map(mapElement, mapOptions);
-		        var locations = [
-		['Новая пл., 6', 'undefined', 'undefined', 'undefined', 'undefined', 55.7583379, 37.6266889, 'ico/marker.png']
-		        ];
-		        for (i = 0; i < locations.length; i++) {
-					if (locations[i][1] =='undefined'){ description ='';} else { description = locations[i][1];}
-					if (locations[i][2] =='undefined'){ telephone ='';} else { telephone = locations[i][2];}
-					if (locations[i][3] =='undefined'){ email ='';} else { email = locations[i][3];}
-		           if (locations[i][4] =='undefined'){ web ='';} else { web = locations[i][4];}
-		           if (locations[i][7] =='undefined'){ markericon ='';} else { markericon = locations[i][7];}
-		            marker = new google.maps.Marker({
-		                icon: markericon,
-		                position: new google.maps.LatLng(locations[i][5], locations[i][6]),
-		                map: map,
-		                title: locations[i][0],
-		                desc: description,
-		                tel: telephone,
-		                email: email,
-		                web: web
-		            });
-		link = '';     }
+		        var markericon = 'ico/marker.png';
+		       	
+		       	marker = new google.maps.Marker({
+		       	    icon: markericon,
+		       	    position: new google.maps.LatLng(55.7583379, 37.6266889),
+		       	    map: map,
+		       	    title: 'Новая пл., д.6'
+		       	});
 
-		}
+			}
 	}
 })(jQuery);
 
@@ -128,5 +111,19 @@ $(function(){
 		});
 
 		that.height(maxheight);
+	}
+})(jQuery);
+
+(function($){
+	$.fn.menuFixed = function(){
+		var that = $(this);
+
+		$(window).on('scroll', function() {
+		    if ($(this).scrollTop() > 30) {
+		         that.addClass('fix').find('.b-nav_item').eq(2).hide();
+		    } else {
+		         that.removeClass('fix').find('.b-nav_item').eq(2).show();
+		    }
+		});
 	}
 })(jQuery);
