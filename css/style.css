@@ -540,8 +540,9 @@ input[type="search"]{
 /* b-responsive */
 .b-responsive_pic{
 	position: relative;
-	height: 459px;
+	min-height: 459px;
 	width: 100%;
+	max-height: 700px;
 }
 .b-responsive_pic_nav{
 	position: absolute;

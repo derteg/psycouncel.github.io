@@ -103,9 +103,6 @@ $(function(){
 
 							overlayBG.click(function(){
 								$dialog.dialog('destroy');
-								$('body').animate({
-									scrollTop: $cont.offset().top
-								}, 200)
 							})
 							overlayBG.css({height: fullH, 'position': 'absolute'});
 		          		},
