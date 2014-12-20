@@ -14,6 +14,7 @@
         <script src="//use.typekit.net/upb3jjt.js"></script>
         <script>try{Typekit.load();}catch(e){}</script>
         <script src="js/libs/jquery-1.11.1.min.js"></script>
+        <script src="js/libs/jquery-ui.min.js"></script>
         <script src="js/libs/jquery.formstyler.min.js"></script>
         <script src='https://maps.googleapis.com/maps/api/js?key=&sensor=false&extension=.js'></script>
         <script src="js/libs/slick.min.js"></script>
@@ -59,9 +60,9 @@
                     </div>
                 </div><!-- b-mainpromo -->
 
-                <div class="b-person_promo">
+                <div class="b-person_promo js-person_popup">
                     <div class="wrapper">
-                        <a href="#0" class="l-person_promo_lnk">
+                        <a href="ajax/person_popup.html" class="l-person_promo_lnk js-person_popup_lnk">
                             <div class="l-person_pic">
                                 <img src="pic/pic_01.jpg" alt="" class="l-person_pic_dis" width="510" height="562">
                                 <img src="pic/pic_01_a.jpg" class="l-person_pic_h" alt=""  width="510"  height="562">
@@ -71,7 +72,7 @@
                                 <p class="l-person_subtitle">консультирующий психолог</p>
                             </div>
                         </a>
-                        <a href="#0" class="l-person_promo_lnk">
+                        <a href="ajax/person_popup.html" class="l-person_promo_lnk js-person_popup_lnk">
                             <div class="l-person_pic">
                                 <img src="pic/pic_02.jpg" alt="" class="l-person_pic_dis" width="510" height="562">
                                 <img src="pic/pic_02_a.jpg" class="l-person_pic_h" alt="" width="510" height="562">
@@ -222,7 +223,7 @@
                                 <textarea type="text" class="b-footer_textarea" placeholder="Ваш вопрос"></textarea>
                             </div>
                             <div class="fieldrow">
-                                <select name="" id="" class="b-footer_select js-select">
+                                <select name="" id="" class="js-select">
                                     <option value="0">Откуда вы о нас узнали?</option>
                                     <option value="1">Откуда вы о нас узнали? 2</option>
                                     <option value="2">Откуда вы о нас узнали? 3</option>
@@ -231,7 +232,8 @@
                             <div class="fieldrow">
                                 <button class="b-footer_btn btn btn-2"><span class="btn_text">Отправить сообщение</span></button>
                             </div>
-                        </form><!-- b-footer_form --></div>
+                        </form><!-- b-footer_form -->
+                    </div>
                     <div id="footer_gmap" class="b-footer_gmap"></div>
                 </div>
                 <div class="b-footer_col col-2 js-height_adjustment">

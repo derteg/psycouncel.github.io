@@ -2,6 +2,7 @@ $(function(){
 	$('#mainPromoSlider').mainPromoSlider(); // слайдер на главной
 	$('.js-select').formStyler(); // form customize
 	$('#footer_gmap').footerGMap(); // footer google map
+	$('.js-person_popup').personPopUp();
 });
 
 (function($){
@@ -18,10 +19,7 @@ $(function(){
 	$.fn.formStyler = function(){
 		var select = $(this);
 
-		select.styler({
-			selectSmartPositioning: false,
-			selectSearchLimit: 7
-		});
+		select.selectmenu();
 	}
 })(jQuery);
 
@@ -74,3 +72,49 @@ $(function(){
 		}
 	}
 })(jQuery);
+
+(function($){
+	$.fn.personPopUp = function(){
+		var $cont = $(this);
+
+		$cont.on('click', '.js-person_popup_lnk', function(e){
+			e.preventDefault();
+			var $btn = $(this),
+				fullH = $('body').height();
+
+				console.log(fullH)
+
+			$.ajax({
+		        url: $btn.attr('href'),
+		        method: 'GET',
+		        cache: false,
+		        async: false,
+		        success: function(html){
+		        	var $dialog = $('<div/>').html(html);
+		          $dialog.dialog({
+		          		appendTo: 'body',
+		          		position: {
+		          			my: "center top", 
+		          			at: "center top", 
+		          			of: $cont 
+		          		},
+		          		open: function(){
+		          			var overlayBG = $('.ui-widget-overlay');
+
+							overlayBG.click(function(){
+								$dialog.dialog('destroy');
+								$('body').animate({
+									scrollTop: $cont.offset().top
+								}, 200)
+							})
+							overlayBG.css({height: fullH, 'position': 'absolute'});
+		          		},
+		          		width: 900,
+						modal: true,
+						dialogClass: "b-person_popup"
+		          	});
+		        }
+		      });
+		});
+	}
+})(jQuery)
