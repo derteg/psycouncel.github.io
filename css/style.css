@@ -134,6 +134,7 @@ input[type="search"]{
 /* Wrapper (extends .clearfix) */
 .wrapper {
 	width: 1160px;
+	min-width: 1160px;
 	padding: 0 30px;
 	margin: 0 auto;
 }
@@ -199,6 +200,7 @@ input[type="search"]{
 .btn-2{
 	color: #333;
 	border: 3px solid #d1b055;
+	background-color: transparent;
 }
 .btn-2:hover,
 .btn-2:active {
@@ -634,6 +636,10 @@ input[type="search"]{
 
 
 /* b-footer */
+.b-footer{
+	min-width: 1260px;
+	margin: 0 auto;
+}
 .b-footer_adress{
 	padding: 60px;
 	background-color: #7459a5;
@@ -641,7 +647,7 @@ input[type="search"]{
 }
 .b-footer_adress_wrap{
 	position: relative;
-	padding: 58px 55px 98px;
+	padding: 58px 55px 94px;
 	border: 3px solid #fff;
 }
 .b-footer_adress_wrap:before{
@@ -694,4 +700,95 @@ input[type="search"]{
 	font-size: 14px;
 	text-transform: uppercase;
 	letter-spacing: 2px;
+}
+
+/* FORM */
+.b-footer_form_wrap{
+	padding: 80px 42px;
+}
+.b-footer_form_title{
+	font-size: 40px;
+	margin-bottom: 34px;
+}
+.b-footer_inp{
+	height: 50px;
+}
+.b-footer_inp,
+.jq-selectbox,
+.b-footer_textarea{
+	min-width: 512px;
+	width: 100%;
+	border: 3px solid #e2e2e2;
+	outline: none;
+	margin-bottom: 20px;
+	font-size: 18px;
+	font-style: italic;
+	padding: 14px 13px;
+	color: #333333;	
+	font-family: 'ff-more-web-pro', serif;
+	line-height: 26px;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	-webkit-transition: border-color .25s, color .25s;
+	transition: border-color .25s, color .25s;
+}
+.b-footer_select{
+	padding: 0;
+}
+.b-footer_inp:focus,
+.b-footer_select:focus,
+.b-footer_textarea:focus{
+	border-color: #c0bfbf;
+	color: #333333;
+}
+.b-footer_textarea{
+	height: 166px;
+}
+.b-footer_btn{
+	min-width: 512px;
+	width: 100%;
+	position: relative;
+}
+.jq-selectbox{
+	cursor: pointer;
+}
+.jq-selectbox__select{
+	padding: 14px 13px;
+}
+.jq-selectbox__select:after{
+	content: "$";
+	font-family: 'icomoon-psycouncel';
+	font-size: 8px;
+	font-style: normal;
+	color: #4e4e4e;
+	display: inline-block;
+	position: absolute;
+	right: 0;
+	top: 50%;
+	margin-top: -11px;
+	margin-right: 20px;
+}
+.jq-selectbox__dropdown{
+	top: 54px;
+	width: 100%;
+	margin-left: -3px;
+	border: 3px solid #e2e2e2;
+}
+.jq-selectbox__dropdown li{
+	margin: 0;
+	padding: 14px 13px;
+	background-color: #fff;
+	border-bottom: 1px solid #e5e7e9;
+	transition: background-color .25s;
+	-webkit-transition: background-color .25s;	
+}
+.jq-selectbox__dropdown li:hover{
+	background-color: #f6efdd;
+}
+
+#footer_gmap{
+	display: inline-block;
+	vertical-align: bottom;
+	height:350px;
+	width:100%;
 }
