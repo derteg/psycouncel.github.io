@@ -3,6 +3,9 @@ $(function(){
 	$('.js-select').formStyler(); // form customize
 	$('#footer_gmap').footerGMap(); // footer google map
 	$('.js-person_popup').personPopUp();
+	$(window).on('load resize', function(){
+		$('.js-height_adjustment').heightAdjustment();
+	})
 });
 
 (function($){
@@ -114,4 +117,16 @@ $(function(){
 		      });
 		});
 	}
-})(jQuery)
+})(jQuery);
+
+(function($){
+	$.fn.heightAdjustment = function(){
+		var maxheight = 0;
+		var that = $(this);
+		that.each(function() {
+		  if($(this).height() > maxheight) { maxheight = $(this).height(); }
+		});
+
+		that.height(maxheight);
+	}
+})(jQuery);
