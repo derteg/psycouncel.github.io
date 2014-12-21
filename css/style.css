@@ -230,19 +230,106 @@ input[type="search"]{
 	height: 100%;
 }
 
+.btn-2.type_1:before{
+	content: "*";
+	font-family: 'icomoon-psycouncel';
+	font-size: 30px;
+	position: absolute;
+	top: 100%;
+	left: 10px;
+	margin-top: -10px;
+	background-color: #f2f2f2;
+	letter-spacing: -0.5px;
+	padding: 0 5px 0 6px;
+	color: #d1b055;
+	-webkit-transition: padding .25s, left .25s;
+	transition: padding .25s, left .25s;
+}
+.btn-2:hover.type_1:before{
+	z-index: 2;
+	left: 16px;
+	padding: 0;
+}
+.btn-2.type_1 .btn_text:after{
+	content: "";
+	position: absolute;
+	right: -22px;
+	top: -16px;
+	background-color: #d1b055;
+	height: 48px;
+	width: 3px;
+	display: inline-block;
+	-webkit-box-shadow: 2px 0px 0px 4px rgba(242, 242, 242, 1);
+	-moz-box-shadow: 2px 0px 0px 4px rgba(242, 242, 242, 1);
+	box-shadow: 2px 0px 0px 4px rgba(242, 242, 242, 1);
+	-webkit-transition: box-shadow .25s, background-color .25s;
+	transition: box-shadow .25s, background-color .25s;
+}
+.btn-2.type_1:hover .btn_text:after,
+.btn-2.type_1:focus .btn_text:after{
+	background-color: transparent;
+	-webkit-box-shadow: 8px 0px 0px 4px rgba(242, 242, 242, 1);
+	-moz-box-shadow: 8px 0px 0px 4px rgba(242, 242, 242, 1);
+	box-shadow: 8px 0px 0px 4px rgba(242, 242, 242, 1);
+}
+
+.btn-3.type_2:before{
+	content: ',';
+	font-family: 'icomoon-psycouncel';
+	font-size: 74px;
+	position: absolute;
+	top: -8px;
+	left: 100%;
+	padding-left: 4px;
+	background-color: #fff;
+	color: #7459a5;
+}
+
+.btn-2.type_3:before{
+	content: "%";
+	font-family: 'icomoon-psycouncel';
+	font-size: 16px;
+	position: absolute;
+	top: 14px;
+	left: 100%;
+	margin-left: -6px;
+	background-color: #f2f2f2;
+	padding: 6px 0;
+	color: #d1b055;
+	opacity: 1;
+	-webkit-transition: opacity .25s;
+	transition: opacity .25s;
+}
+.btn-2.type_3:hover:before{
+	opacity: 0;
+}
+.btn-2.type_4:before{
+	content: "0";
+	font-family: 'icomoon-psycouncel';
+	font-size: 30px;
+	position: absolute;
+	top: -3px;
+	left: 100%;
+	background-color: #fff;
+	color: #d1b055;
+	-webkit-transition: background-color .25s;
+	transition: background-color .25s;
+}
+.btn-2:hover.type_4:before{
+	background-color: transparent;
+}
 /* b-header */
 .b-header_wrap{
 	background-color: #dabe72;
 	white-space: nowrap;
 	border-bottom: 3px solid #c4ab66;
 	width: 100%;
-	transition: height .25s;
 }
 .b-logo{
-	margin-top: 30px;
-	-webkit-transition: all 0.3s;
-	-moz-transition: all 0.3s;
-	transition: all 0.3s;
+	margin-top: 23px;
+	-webkit-transition: all 0.15s;
+	-moz-transition: all 0.15s;
+	transition: all 0.15s;
 }
 .b-logo_lnk{
 	display: inline-block;
@@ -258,23 +345,27 @@ input[type="search"]{
 .b-nav{
 	margin: 0 auto;
 	width: 650px;
-	line-height: 130px;
+	line-height: 110px;
 	vertical-align: middle;
-	-webkit-transition: all 0.3s;
-	-moz-transition: all 0.3s;
-	transition: all 0.3s;
+	-webkit-transition: line-height 0.15s;
+	-moz-transition: line-height 0.15s;
+	transition: line-height 0.15s;
 }
 .b-nav_item{
 	display: inline-block;
 	white-space: normal;
-	max-width: 150px;
+	max-width: 140px;
 	padding: 0 17px;
+	-webkit-transition: position .25s, opacity .25s;
+	transition: position .25s, opacity .25s;
 }
 .l-nav_lnk{
 	color: #fff;
 	text-align: left;
 	vertical-align: top;
+	padding-bottom: 12px;
 	display: inline-block;
+	-webkit-transition: color .25s;
 	transition: color .25s;
 }
 .l-nav_lnk:hover{
@@ -303,20 +394,23 @@ input[type="search"]{
     left:0;
     right:0;
     margin:0;
-    z-index: 11;
+    z-index: 9;
     height: 92px;
 }
 .b-header_wrap.fix .b-nav{
-	line-height: 89px;
+	line-height: 63px;
 }
 .b-header_wrap.fix .b-callback_top{
 	margin-top: 17px;
 }
 .b-header_wrap.fix .b-logo{
-	margin-top: 17px;
+	margin-top: 10px;
 }
 .b-header_wrap.fix .b-nav_item{
 	max-width: 100%;
+}
+.b-header_wrap.fix .l-nav_lnk{
+	padding-top: 14px;
 }
 
 /* b-content */
@@ -324,7 +418,7 @@ input[type="search"]{
 .l-content_title{
 	font-size: 40px;
 	font-weight: normal;
-	margin-top: 84px;
+	margin-top: 94px;
 	text-align: center;
 }
 .l-content_title .text{
@@ -409,10 +503,10 @@ input[type="search"]{
 .l-person_promo_lnk .l-person_pic_dis{
 	display: inline;
 }
-.l-person_promo_lnk .l-person_pic_h{
+.l-person_promo_lnk .l-person_pic_hov{
 	display: none;
 }
-.l-person_promo_lnk:hover .l-person_pic_h{
+.l-person_promo_lnk:hover .l-person_pic_hov{
 	display: inline;
 }
 .l-person_promo_lnk:hover .l-person_pic_dis{
@@ -466,18 +560,20 @@ input[type="search"]{
 }
 
 .l-person_about.larr:after{
-	content: '%';
+	content: '/';
 	left: 100%;
 	margin-top: -16px;
 	padding-top: 10px;
-	margin-left: -6px;
+	margin-left: -4px;
+	font-size: 15px;
 }
 .l-person_about.rarr:before{
-	content: '%';
+	content: '.';
 	right: 100%;
-	margin-top: -16px;
-	padding-top: 10px;
-	margin-right: -6px;
+	margin-top: -2px;
+	padding-right: 12px;
+	margin-right: -19px;
+	font-size: 10px;
 }
 .l-person_about.larr:after,
 .l-person_about.rarr:before{
@@ -613,6 +709,19 @@ input[type="search"]{
 .b-responsive_btn{
 	margin-top: 70px;
 	color: #fff;
+}
+
+.b-responsive_pic .l-responsive_pic_dis{
+	display: inline;
+}
+.b-responsive_pic .l-responsive_pic_hov{
+	display: none;
+}
+.b-responsive_pic:hover .l-responsive_pic_hov{
+	display: inline;
+}
+.b-responsive_pic:hover .l-responsive_pic_dis{
+	display: none;
 }
 
 /* b-articles */
@@ -814,20 +923,22 @@ input[type="search"]{
 	border: 3px solid #c0bfbf;
 }
 .ui-selectmenu-button.ui-corner-all:before{
-	content: "$";
+	content: '"';
 	position: absolute;
 	right: 0;
 	top: 50%;
 	margin-top: -5px;
+	color: #4e4e4e;
 	margin-right: 20px;
 	font: 10px 'icomoon-psycouncel';
 }
 .ui-selectmenu-button.ui-corner-top:before{
-	content: "$";
+	content: "1";
 	position: absolute;
 	right: 0;
 	top: 50%;
 	margin-top: -5px;
+	color: #d1b055;
 	margin-right: 20px;
 	font: 10px 'icomoon-psycouncel';
 }
@@ -900,6 +1011,26 @@ input[type="search"]{
 	top: 0;
 	left: 0;
 	width: 100%;
+}
+.b-person_popup .ui-dialog-titlebar{
+	height: 0;
+}
+.b-person_popup .ui-dialog-titlebar-close .ui-button-text{
+	display: none;
+}
+.b-person_popup .ui-dialog-titlebar-close{
+	background: transparent url('../ico/ico_03.png') no-repeat;
+	width: 26px;
+	height: 26px;
+	display: inline-block;
+	border: none;
+	outline: none;
+	position: absolute;
+	z-index: 10;
+	top: 68px;
+	left: 100%;
+	margin-left: 85px;
+	cursor: pointer;
 }
 .b-person_popup_pic{
 	position: relative;

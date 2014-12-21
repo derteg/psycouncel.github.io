@@ -81,7 +81,7 @@ $(function(){
 		          		appendTo: 'body',
 		          		position: {
 		          			my: "center top", 
-		          			at: "center top", 
+		          			at: "center top+100px", 
 		          			of: $cont 
 		          		},
 		          		open: function(){
@@ -120,9 +120,9 @@ $(function(){
 
 		$(window).on('scroll', function() {
 		    if ($(this).scrollTop() > 30) {
-		         that.addClass('fix').find('.b-nav_item').eq(2).hide();
+		         that.addClass('fix').find('.b-nav_item').eq(2).css({'position': 'absolute', 'opacity': 0});
 		    } else {
-		         that.removeClass('fix').find('.b-nav_item').eq(2).show();
+		         that.removeClass('fix').find('.b-nav_item').eq(2).css({'position': 'relative', 'opacity': 1});
 		    }
 		});
 	}
