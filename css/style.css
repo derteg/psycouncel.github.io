@@ -357,8 +357,6 @@ input[type="search"]{
 	white-space: normal;
 	max-width: 140px;
 	padding: 0 17px;
-	-webkit-transition: position .25s, opacity .25s;
-	transition: position .25s, opacity .25s;
 }
 .l-nav_lnk{
 	color: #fff;
