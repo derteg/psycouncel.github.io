@@ -68,8 +68,6 @@ $(function(){
 			var $btn = $(this),
 				fullH = $('body').height();
 
-				console.log(fullH)
-
 			$.ajax({
 		        url: $btn.attr('href'),
 		        method: 'GET',
@@ -77,26 +75,26 @@ $(function(){
 		        async: false,
 		        success: function(html){
 		        	var $dialog = $('<div/>').html(html);
-		          $dialog.dialog({
-		          		appendTo: 'body',
-		          		position: {
-		          			my: "center top", 
-		          			at: "center top+100px", 
-		          			of: $cont 
-		          		},
-		          		open: function(){
-		          			var overlayBG = $('.ui-widget-overlay');
+			          $dialog.dialog({
+			          		appendTo: 'body',
+			          		position: {
+			          			my: "center top", 
+			          			at: "center top+100px", 
+			          			of: window 
+			          		},
+			          		open: function(){
+			          			var overlayBG = $('.ui-widget-overlay');
 
-							overlayBG.click(function(){
-								$dialog.dialog('destroy');
-							})
-							overlayBG.css({height: fullH, 'position': 'absolute'});
-		          		},
-		          		width: 900,
-						modal: true,
-						dialogClass: "b-person_popup"
-		          	});
-		        }
+								overlayBG.click(function(){
+									$dialog.dialog('destroy');
+								})
+								overlayBG.css({height: fullH, 'position': 'absolute'});
+			          		},
+			          		width: 900,
+							modal: true,
+							dialogClass: "b-person_popup"
+			          	});
+			        }
 		      });
 		});
 	}
