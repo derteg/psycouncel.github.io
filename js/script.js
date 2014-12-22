@@ -122,9 +122,9 @@ $(function(){
 
 		$(window).on('scroll', function() {
 		    if ($(this).scrollTop() > 30) {
-		         that.addClass('fix').find('.b-nav_item').eq(2).css({'position': 'absolute', 'opacity': 0});
+		         that.addClass('fix').find('.b-nav_item').eq(2).css({'position': 'absolute', 'left': '-50px', 'opacity': 0});
 		    } else {
-		         that.removeClass('fix').find('.b-nav_item').eq(2).css({'position': 'relative', 'opacity': 1});
+		         that.removeClass('fix').find('.b-nav_item').eq(2).css({'position': 'relative', 'left': 0, 'opacity': 1});
 		    }
 		});
 	}
