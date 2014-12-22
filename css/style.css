@@ -515,16 +515,13 @@ input[type="search"]{
 	padding: 20px;
 	padding-bottom: 94px;
 }
-.l-person_promo_lnk .l-person_pic_dis{
-	display: inline;
+
+.l-person_promo_lnk .l-person_pic_hov{
+	position: absolute;
+	top: 20px;
+	left: 20px;
 }
 .l-person_promo_lnk .l-person_pic_hov{
-	display: none;
-}
-.l-person_promo_lnk:hover .l-person_pic_hov{
-	display: inline;
-}
-.l-person_promo_lnk:hover .l-person_pic_dis{
 	display: none;
 }
 .l-person_about{
@@ -726,16 +723,12 @@ input[type="search"]{
 	color: #fff;
 }
 
+.b-responsive_pic .l-responsive_pic_hov,
 .b-responsive_pic .l-responsive_pic_dis{
-	display: inline;
+	position: absolute;
+	top: 0;
 }
 .b-responsive_pic .l-responsive_pic_hov{
-	display: none;
-}
-.b-responsive_pic:hover .l-responsive_pic_hov{
-	display: inline;
-}
-.b-responsive_pic:hover .l-responsive_pic_dis{
 	display: none;
 }
 

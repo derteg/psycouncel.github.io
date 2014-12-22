@@ -7,6 +7,7 @@ $(function(){
 		$('.js-height_adjustment').heightAdjustment();
 	});
 	$('.js-header_fix').menuFixed();
+	$('.js-responsive_pic').imgFade() // плавные переод картинок
 });
 
 (function($){
@@ -65,8 +66,7 @@ $(function(){
 
 		$cont.on('click', '.js-person_popup_lnk', function(e){
 			e.preventDefault();
-			var $btn = $(this),
-				fullH = $('body').height();
+			var $btn = $(this);
 
 			$.ajax({
 		        url: $btn.attr('href'),
@@ -74,13 +74,15 @@ $(function(){
 		        cache: false,
 		        async: false,
 		        success: function(html){
-		        	var $dialog = $('<div/>').html(html);
+		        	var $dialog = $('<div/>').html(html),
+		        		dialH = $dialog.height(),
+		        		fullH = $(document).height();
 			          $dialog.dialog({
 			          		appendTo: 'body',
 			          		position: {
 			          			my: "center top", 
-			          			at: "center top+100px", 
-			          			of: window 
+			          			at: "center top", 
+			          			of: window
 			          		},
 			          		open: function(){
 			          			var overlayBG = $('.ui-widget-overlay');
@@ -94,7 +96,9 @@ $(function(){
 							modal: true,
 							dialogClass: "b-person_popup"
 			          	});
+			          $dialog.css({'position': 'absolute'});
 			        }
+
 		      });
 		});
 	}
@@ -125,3 +129,13 @@ $(function(){
 		});
 	}
 })(jQuery);
+
+(function($){
+	$.fn.imgFade = function(){
+		$('.js-responsive_pic').hover(function(){
+			$(this).find('.js-pic_hov').fadeIn();
+		}, function(){
+			$(this).find('.js-pic_hov').fadeOut();
+		}, 200);
+	}
+})(jQuery)
