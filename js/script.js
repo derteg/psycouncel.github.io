@@ -148,7 +148,7 @@ $(function(){
 			event.preventDefault();
 			
 			$.ajax({
-		        url: $btn.attr('href'),
+		        url: $btn.attr('data-article-href'),
 		        method: 'GET',
 		        cache: false,
 		        async: false,
@@ -156,7 +156,7 @@ $(function(){
 		        	$(html).appendTo('.js-articles')
 		        	$('body').animate({
 		        	  scrollTop: $('.b-articles_col:last').offset().top - $('.js-header_fix').height()
-		        	}, 800)
+		        	}, 500)
 			    }
 		      });
 		})
