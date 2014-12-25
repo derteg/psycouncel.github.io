@@ -8,6 +8,7 @@ $(function(){
 	});
 	$('.js-header_fix').menuFixed();
 	$('.js-responsive_pic').imgFade() // плавные переход картинок
+	$('.js-more_articles').ajaxArticles();
 });
 
 (function($){
@@ -138,4 +139,26 @@ $(function(){
 			$(this).find('.js-pic_hov').fadeOut();
 		}, 200);
 	}
-})(jQuery)
+})(jQuery);
+
+(function($){
+	$.fn.ajaxArticles = function(){
+		var $btn = $(this);
+		$btn.on('click', function(event){
+			event.preventDefault();
+			
+			$.ajax({
+		        url: $btn.attr('href'),
+		        method: 'GET',
+		        cache: false,
+		        async: false,
+		        success: function(html){
+		        	$(html).appendTo('.js-articles')
+		        	$('body').animate({
+		        	  scrollTop: $('.b-articles_col:last').offset().top - $('.js-header_fix').height()
+		        	}, 800)
+			    }
+		      });
+		})
+	}
+})(jQuery);
