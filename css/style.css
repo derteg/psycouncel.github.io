@@ -351,6 +351,11 @@ input[type="search"]{
 	top: 12px;
 	left: 0;
 }
+
+.pl30{
+	padding-left: 30px;
+}
+
 /* b-header */
 .b-header_wrap{
 	background-color: #dabe72;
@@ -1336,4 +1341,28 @@ input[type="search"]{
 /* b-article_inner */
 .b-article_inner{
 	background-color: #f2f2f2;
+	padding: 70px 0;
+}
+.b-article_content{
+	padding: 0 130px;
+	margin-top: 50px;
+}
+.b-article_content p{
+	margin-bottom: 8px;
+	font: normal 15px/24px Arial, 'Helvetica Neue', sans-serif;
+}
+.b-list_num{
+	padding-left: 54px;
+	margin-bottom: 16px;
+	font: bold 15px/24px Arial, 'Helvetica Neue', sans-serif;
+}
+.b-list_num_item{
+	margin-bottom: 4px;
+}
+.b-article_content h2{
+	margin: 86px 0 60px;
+	line-height: 48px;
+}
+.b-article_content .b-subtitle_h{
+	margin-bottom: 52px;
 }
