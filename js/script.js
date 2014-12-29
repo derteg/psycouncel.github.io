@@ -123,9 +123,11 @@ $(function(){
 
 		$(window).on('scroll', function() {
 		    if ($(this).scrollTop() > 30) {
-		         that.addClass('fix').find('.b-nav_item').eq(2).addClass('l-fix_item')
+		    	that.addClass('fix')
+		         // that.addClass('fix').find('.b-nav_item').eq(2).addClass('l-fix_item')
 		    } else {
-		         that.removeClass('fix').find('.b-nav_item').eq(2).removeClass('l-fix_item')
+		    	that.removeClass('fix')
+		         // that.removeClass('fix').find('.b-nav_item').eq(2).removeClass('l-fix_item')
 		    }
 		});
 	}
