@@ -136,9 +136,9 @@ $(function(){
 (function($){
 	$.fn.imgFade = function(){
 		$('.js-responsive_pic').hover(function(){
-			$(this).find('.js-pic_hov').fadeIn();
+			$(this).find('.js-pic_hov').finish().fadeIn();
 		}, function(){
-			$(this).find('.js-pic_hov').fadeOut();
+			$(this).find('.js-pic_hov').finish().fadeOut();
 		}, 200);
 	}
 })(jQuery);

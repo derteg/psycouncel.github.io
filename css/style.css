@@ -913,8 +913,22 @@ input[type="search"]{
 .b-footer_col{
 	position: relative;
 }
+.b-footer_pics{
+	position: relative;
+	height: 299px;
+}
 .l-footer_pic img{
-	width: 100%;	
+	position: absolute;
+	top: 0;
+}
+.l-footer_pic.larr img{
+	left: 0;
+}
+.l-footer_pic.rarr img{
+	right: 0;
+}
+.js-pic_hov{
+	display: none;
 }
 .b-footer_adress{
 	padding: 60px;
