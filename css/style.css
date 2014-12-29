@@ -555,6 +555,9 @@ input[type="search"]{
 	width: 100%;
 	height: auto;
 }
+.b-mainpromo_pic img{
+	width: 100%;
+}
 .b-mainpromo_article{
 	position: relative;
 	top: 35px;

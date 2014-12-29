@@ -139,7 +139,7 @@ $(function(){
 			$(this).find('.js-pic_hov').finish().fadeIn();
 		}, function(){
 			$(this).find('.js-pic_hov').finish().fadeOut();
-		}, 200);
+		}, 600);
 	}
 })(jQuery);
 
