@@ -875,6 +875,16 @@ input[type="search"]{
 	font-weight: normal;
 	margin-bottom: 3px;
 }
+.l-articles_lnk{
+	color: #333333;
+	transition: color .25s;
+}
+.type-1 .l-articles_lnk:hover{
+	color: #d1b055;
+}
+.type-2 .l-articles_lnk:hover{
+	color: #7459a5;
+}
 .l-articles_date{
 	font-size: 13px;
 	line-height: 32px;
@@ -1039,6 +1049,7 @@ input[type="search"]{
 }
 .b-footer_textarea{
 	height: 166px;
+	resize: none;
 }
 .b-footer_btn{
 	width: 512px;
