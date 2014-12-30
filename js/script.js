@@ -217,7 +217,7 @@ $(function(){
 				var $btn = $(this);
 
 					$.ajax({
-				        url: 'ajax/ajax_popup_gallery.html',
+				        url: $btn.attr('data-url'),
 				        method: 'GET',
 				        cache: false,
 				        async: false,
@@ -228,8 +228,8 @@ $(function(){
 					          $dialog.dialog({
 					          		appendTo: 'body',
 					          		position: {
-					          			my: "center center", 
-					          			at: "center center",
+					          			my: "center top", 
+					          			at: "center top",
 					          			of: window
 					          		},
 					          		open: function(){
