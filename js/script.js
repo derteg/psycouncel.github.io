@@ -9,6 +9,7 @@ $(function(){
 	$('.js-header_fix').menuFixed();
 	$('.js-responsive_pic').imgFade() // плавные переход картинок
 	$('.js-more_articles').ajaxArticles();
+	$('.js-mainpromo_next').animateToPerson();
 });
 
 (function($){
@@ -162,5 +163,40 @@ $(function(){
 			    }
 		      });
 		})
+	}
+})(jQuery);
+
+(function($){
+	$.fn.animateToPerson = function(){
+		var win = $(window),
+			$btn = this,
+			$btnLnk = $('.js-person_scroll'),			
+			$head = $('.js-header_fix');
+
+		win.scroll(function(){
+			if(win.scrollTop() >= 100){
+				$btn.addClass('current');
+			} else if (win.scrollTop() <= 100){
+				$btn.removeClass('current');
+			}
+		});
+
+		$btn.on('click', bodyAnimate);
+		$btnLnk.on('click', bodyAnimate);
+
+		function bodyAnimate(e){
+			e.preventDefault();
+			if($head.hasClass('fix')){
+				var fixH = $head.height();
+				$('body').animate({
+					scrollTop: $('.js-person_popup_lnk').offset().top - fixH
+				});
+			} else {
+				var defH = $head.height();
+				$('body').animate({
+					scrollTop: $('.js-person_popup_lnk').offset().top - defH - 92
+				});
+			}
+		}
 	}
 })(jQuery);

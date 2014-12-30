@@ -565,7 +565,7 @@ input[type="search"]{
 .b-mainpromo_subtxt{
 	font-size: 22px;
 	line-height: 36px;
-	margin-bottom: 90px;
+	margin-bottom: 60px;
 }
 .b-mainpromo_subtxt_person{
 	display: block;
@@ -587,8 +587,61 @@ input[type="search"]{
 	margin: 28px 0;
 }
 .b-mainpromo_next{
-	/* margin-bottom: 60px; */
+	padding: 30px 0 20px;
 }
+.b-mainpromo_next.current{
+	-ms-animation: bubbleJump 1.5s;
+	-moz-animation: bubbleJump 1.5s;
+	-webkit-animation: bubbleJump 1.5s;
+}
+@-webkit-keyframes bubbleJump{
+	0%{
+		transform: translateY(0)
+	}20%{
+		transform: translateY(-20px)
+	}40%{
+		transform: translateY(30px)
+	}60%{
+		transform: translateY(-10px)
+	}80%{
+		transform: translateY(20px)
+	}100%{
+		transform: translateY(0px)
+	}
+}
+@-moz-keyframes bubbleJump{
+	0%{
+		transform: translateY(0)
+	}20%{
+		transform: translateY(-20px)
+	}40%{
+		transform: translateY(30px)
+	}60%{
+		transform: translateY(-10px)
+	}80%{
+		transform: translateY(20px)
+	}100%{
+		transform: translateY(0px)
+	}
+}
+@-ms-keyframes bubbleJump{
+	0%{
+		transform: translateY(0)
+	}20%{
+		transform: translateY(-20px)
+	}40%{
+		transform: translateY(30px)
+	}60%{
+		transform: translateY(-10px)
+	}80%{
+		transform: translateY(20px)
+	}100%{
+		transform: translateY(0px)
+	}
+}
+/*@-ms-keyframes show{0%{transform: translateY(0)}100%{transform: translateY(100px)}}
+@-moz-keyframes show{0%{transform: translateY(0)}100%{transform: translateY(100px)}}*/
+
 .b-mainpromo_next .icomoon{
 	cursor: pointer;
 	color: #fff;
@@ -600,7 +653,7 @@ input[type="search"]{
 	text-align: center;
 	background-color: #f2f2f2;
 	position: relative;
-	margin-top: -30px;
+	margin-top: -50px;
 }
 .b-person_promo:before{
 	content: '';
