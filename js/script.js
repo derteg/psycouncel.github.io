@@ -101,6 +101,7 @@ $(function(){
 								overlayBG.css({height: fullH, 'position': 'absolute'});
 			          		},
 			          		width: 900,
+			          		height: "auto",
 							modal: true,
 							dialogClass: "b-person_popup"
 			          	});
