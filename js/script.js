@@ -10,6 +10,7 @@ $(function(){
 	$('.js-responsive_pic').imgFade() // плавные переход картинок
 	$('.js-more_articles').ajaxArticles();
 	$('.js-mainpromo_next').animateToPerson();
+	$('.js-footer_pic').footerGalleryPopUp();
 });
 
 (function($){
@@ -88,10 +89,15 @@ $(function(){
 			          		},
 			          		open: function(){
 			          			var overlayBG = $('.ui-widget-overlay');
+			          			var $close = $('.ui-dialog-titlebar-close');
 
-								overlayBG.click(function(){
+								overlayBG.click(dialogDestroy);
+								$close.click(dialogDestroy);
+
+								function dialogDestroy(){
 									$dialog.dialog('destroy');
-								})
+								}
+
 								overlayBG.css({height: fullH, 'position': 'absolute'});
 			          		},
 			          		width: 900,
@@ -198,5 +204,60 @@ $(function(){
 				});
 			}
 		}
+	}
+})(jQuery);
+
+(function($){
+	$.fn.footerGalleryPopUp = function(){
+		var elem = $(this);
+
+		$.each(elem, function(index){			
+			$(this).on('click', function(){
+				var indexEl = index;
+				var $btn = $(this);
+
+					$.ajax({
+				        url: 'ajax/ajax_popup_gallery.html',
+				        method: 'GET',
+				        cache: false,
+				        async: false,
+				        success: function(html){
+				        	var $dialog = $('<div/>').html(html),
+				        		dialH = $dialog.height(),
+				        		fullH = $(document).height();
+					          $dialog.dialog({
+					          		appendTo: 'body',
+					          		position: {
+					          			my: "center center", 
+					          			at: "center center",
+					          			of: window
+					          		},
+					          		open: function(){
+					          			var overlayBG = $('.ui-widget-overlay');
+					          			var $close = $('.ui-dialog-titlebar-close');
+
+										overlayBG.click(dialogDestroy);
+										$close.click(dialogDestroy);
+
+										function dialogDestroy(){
+											$dialog.dialog('destroy');
+										}
+
+										$('.js-footer_gallery').slick({
+											dots: false
+										}).slickGoTo(parseFloat(indexEl));
+
+										overlayBG.css({height: fullH, 'position': 'absolute'});
+					          		},
+					          		width: 1100,
+									modal: true,
+									dialogClass: "b-footer_gallery_popup"
+					          	});
+					          $dialog.css({'position': 'absolute'});
+					        }
+
+				      });
+			})
+		})
 	}
 })(jQuery);

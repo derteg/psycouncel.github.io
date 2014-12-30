@@ -1528,3 +1528,81 @@ input[type="search"]{
 .b-labs_list_date{
 	font: 900 italic 13px/30px 'ff-more-web-pro', serif;
 }
+
+
+/* b-footer_gallery_popup */
+.b-footer_gallery_popup{
+	z-index: 10;
+	outline: none;
+}
+.b-footer_gallery_popup .ui-dialog-titlebar{
+	height: 0;
+}
+.b-footer_gallery_popup .ui-dialog-titlebar-close .ui-button-text{
+	display: none;
+}
+.b-footer_gallery_popup .ui-dialog-titlebar-close{
+	background: transparent url('../ico/ico_03.png') no-repeat;
+	width: 26px;
+	height: 26px;
+	display: inline-block;
+	border: none;
+	outline: none;
+	position: absolute;
+	z-index: 10;
+	top: 32px;
+	right: 34px;
+	margin-left: 20px;
+	cursor: pointer;
+}
+
+.b-footer_gallery{
+	width: 1100px;
+}
+.b-fotter_gallery_pic{
+	width: 100%;
+}
+.b-footer_gallery .slick-slide{
+	position: relative;
+}
+.b-footer_gallery .slick-next,
+.b-footer_gallery .slick-prev{
+	width: 18px;
+	height: 28px;
+}
+.b-footer_gallery .slick-next{
+	right: 35px;
+}
+.b-footer_gallery .slick-prev{
+	left: 35px;
+}
+.b-footer_gallery .slick-next:before,
+.b-footer_gallery .slick-prev:before{
+	font-family: 'icomoon-psycouncel';
+	font-size: 28px;
+	color: #fff;
+	-webkit-transition: color .25s;
+	transition: color .25s;
+}
+.b-footer_gallery .slick-next:before{
+	content: "'";
+}
+.b-footer_gallery .slick-prev:before{
+	content: "(";
+}
+.l-footer_gallery_text{
+	position: absolute;
+	top: 524px;
+	left: 104px;
+	background-color: rgba(116, 89, 165, 0.7);
+	padding: 26px;
+	color: #fff;
+	width: 410px;
+	font: normal 15px/22px Arial, 'Helvetica Neue', sans-serif;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+.l-footer_gallery_text_wrap{
+	overflow: hidden;
+	max-height: 134px;
+}
