@@ -278,6 +278,7 @@ input[type="search"]{
 	content: ',';
 	font-family: 'icomoon-psycouncel';
 	font-size: 74px;
+	line-height: 1;
 	position: absolute;
 	top: -8px;
 	left: 100%;
@@ -774,7 +775,6 @@ input[type="search"]{
 }
 .b-skill_cols{
 	margin-top: 63px;
-	margin-bottom: 70px;
 }
 .l-skill_item{
 	text-align: left;
@@ -934,13 +934,11 @@ input[type="search"]{
 }
 .l-articles_lnk{
 	color: #333333;
+	-webkit-transition: color .25s;
 	transition: color .25s;
 }
-.type-1 .l-articles_lnk:hover{
-	color: #d1b055;
-}
-.type-2 .l-articles_lnk:hover{
-	color: #7459a5;
+.l-articles_lnk:hover{
+	color: #5e5e5e;
 }
 .l-articles_date{
 	font-size: 13px;
@@ -976,9 +974,11 @@ input[type="search"]{
 .b-footer_cols{
 	background-color: #fff;	
 	overflow: hidden;
+	min-width: 1260px;
 }
 .b-footer_col{
 	position: relative;
+	min-width: 630px;
 }
 .b-footer_pics{
 	position: relative;
@@ -1219,6 +1219,7 @@ input[type="search"]{
 	top: 0;
 	left: 0;
 	width: 100%;
+	min-width: 1260px;
 }
 .b-person_popup .ui-dialog-titlebar{
 	height: 0;
@@ -1309,6 +1310,9 @@ input[type="search"]{
 	font-size: 22px;
 	line-height: 36px;
 	margin-bottom: 32px;
+}
+.b-popup_form_title.fsz30{
+	font-size: 30px;
 }
 
 /* b-about */
@@ -1453,6 +1457,11 @@ input[type="search"]{
 	overflow: hidden;
 	background-color: #f2f2f2;
 	padding: 100px 0;
+	-webkit-transition: .8s;
+	transition: .8s;
+}
+.b-labs:hover{
+	background-image: url('../pic/pic_11_h.jpg');
 }
 .b-labs_pic{
 	position: absolute;
@@ -1570,8 +1579,8 @@ input[type="search"]{
 .b-footer_gallery .slick-prev{
 	overflow: hidden;
 	width: 100px;
-	height: 90%;
-	top: 40px;
+	height: 80%;
+	top: 80px;
 	margin: 0;
 	background-color: transparent;
 	-webkit-transition: background-color 0.3s;
@@ -1590,7 +1599,7 @@ input[type="search"]{
 	position: absolute;
 	top: 0;
 	min-width: 780px;
-	min-height: 80%;
+	min-height: 100%;
 	opacity: 0;
 	-webkit-transition: opacity 0.3s, -webkit-transform 0.3s;
 	transition: opacity 0.3s, transform 0.3s;
@@ -1623,6 +1632,8 @@ input[type="search"]{
 	font-family: 'icomoon-psycouncel';
 	font-size: 28px;
 	color: #fff;
+	z-index: 1;
+	position: relative;
 	-webkit-transition: opacity .25s, color .25s;
 	transition: opacity .25s, color .25s;
 }
