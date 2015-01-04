@@ -11,20 +11,13 @@
 
 /* Elements */
 * {margin:0; padding:0;}
-HTML {
-	height: 100%;
-	margin: 0;
-	padding: 0;
-	width: 100%;
-	font-size: 100%;
-}
 body{
 	font-family: 'ff-more-web-pro', serif;
 	font-weight: normal;
 	font-size: 16px;
 	color: #333333;
-	width: 100%;
-	height: 100%;
+	overflow-x: hidden;
+	overflow-y: scroll;
 }
 article, aside, details, figcaption, figure, footer, header, hgroup, main, nav, section, summary{
 	display: block;
@@ -846,6 +839,7 @@ input[type="search"]{
 /* b-responsive */
 .b-responsive_cols{
 	max-width: 1920px; 
+	min-width: 1260px;
 	margin: 0 auto;
 }
 .b-responsive_pic{
