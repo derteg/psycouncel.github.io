@@ -225,7 +225,9 @@ $(function(){
 				        success: function(html){
 				        	var $dialog = $('<div/>').html(html),
 				        		dialH = $dialog.height(),
-				        		fullH = $(document).height();
+				        		fullH = $(document).height(),
+				        		gallery = $('.js-footer_gallery');
+
 					          $dialog.dialog({
 					          		appendTo: 'body',
 					          		position: {
@@ -236,6 +238,7 @@ $(function(){
 					          		open: function(){
 					          			var overlayBG = $('.ui-widget-overlay');
 					          			var $close = $('.ui-dialog-titlebar-close');
+					          			var $gallery = $('.js-footer_gallery');
 
 										overlayBG.click(dialogDestroy);
 										$close.click(dialogDestroy);
@@ -244,8 +247,25 @@ $(function(){
 											$dialog.dialog('destroy');
 										}
 
-										$('.js-footer_gallery').slick({
-											dots: false
+										$gallery.slick({
+											slidesToShow: 1,
+    										slidesToScroll: 1,
+											dots: false,
+											infinite: false,
+											onBeforeChange: function(){
+												$('.slick-slide', $gallery).removeClass('slick-slide-next slick-slide-prev');
+											},
+											onAfterChange: function(){
+												$('.slick-active', $gallery).next().addClass('slick-slide-next');
+												$('.slick-active', $gallery).prev().addClass('slick-slide-prev');
+
+												var nextPic = $('.slick-slide-next', $gallery).find('img').clone();
+												var prevPic = $('.slick-slide-prev', $gallery).find('img').clone();
+
+												$('.slick-prev img, .slick-next img', $gallery).remove();
+												$('.slick-prev', $gallery).append(prevPic);
+												$('.slick-next', $gallery).append(nextPic);
+											}
 										}).slickGoTo(parseFloat(indexEl));
 
 										overlayBG.css({height: fullH, 'position': 'absolute'});
