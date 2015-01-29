@@ -1653,3 +1653,43 @@ input[type="search"]{
 	overflow: hidden;
 	max-height: 134px;
 }
+
+
+/* .b-labs_popup */
+.b-labs_popup{
+	position: relative;
+}
+.b-labs_popup_anons{
+	padding: 54px 0;
+	position: absolute;
+	display: table;
+	width: 100%;
+	height: 100%;
+	max-width: 900px;
+	margin: 0 auto;
+	top: 0;
+}
+.b-labs_popup_wrap{
+	display: table-cell;
+	vertical-align: middle;
+	text-align: center;
+}
+.b-labs_popup_date{
+	color: #fff;
+	font-size: 22px;
+	font-family: 'ff-more-web-pro', serif;
+	margin-bottom: 32px;
+}
+.b-labs_popup_ico{
+	margin-bottom: 22px;
+}
+.b-labs_popup_title{
+	color: #fff;
+	font: normal 40px/46px 'ff-more-web-pro', serif;
+	margin-bottom: 10px;
+}
+.b-labs_popup_tag{
+	font: italic 22px/36px 'ff-more-web-pro', serif;
+	color: #fff;
+	margin-bottom: 84px;
+}
