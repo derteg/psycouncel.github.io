@@ -13,6 +13,8 @@ $(function(){
 	$('.js-footer_pic').footerGalleryPopUp();
 	$('.js-callback_top').callbackScroll();
 	$('.js-contact_top').contactScroll();
+	$('.js-quotation_wrap').blockquoteAnimate();
+	$('.js-labs_slider').labsSlider();
 });
 
 (function($){
@@ -342,5 +344,70 @@ $(function(){
 				});
 			}
 		}
+	}
+})(jQuery);
+
+(function($){
+	$.fn.blockquoteAnimate = function(){
+		var $wrap = this;
+
+		function onSlideInit(){
+			var slideActive = $('.slick-active', $wrap),
+				cont = $('.js-quotation', slideActive),
+				textArr = cont.text().split(' ');
+				newArray = [];
+
+				for( var i=0; i<textArr.length; i++ ){
+					var result = "<span class='l-quote'>"+ textArr[i] +" </span>";
+					newArray.push(result);
+				}
+				
+					cont.html(newArray);
+
+			var timer = null;
+
+			var	timer = setTimeout(function run(){
+				var quote = $('.slick-active .l-quote', $wrap),
+					quoteTitle = $('.js-quotation_title', slideActive);
+
+				quote.first().addClass('active');
+				cont.find('.l-quote.active').next().addClass('active');
+
+				setTimeout(run, 150);
+
+				if(quote.last().hasClass('active')){
+					quoteTitle.addClass('active');
+					clearTimeout(timer);
+				}
+			}, 150);
+		}
+
+		$wrap.slick({
+			arrows: false,
+			autoplay: true,
+			autoplaySpeed: 8000,
+			swipe: false,
+			onInit: function(){
+				onSlideInit();
+			},
+			onBeforeChange: function(){
+				$('.slick-active .l-quote', $wrap).removeClass('active');
+				$('.js-quotation_title').removeClass('active');
+			},
+			onAfterChange: function(){
+				onSlideInit();
+			},
+			adaptiveHeight: true
+		});
+
+	}
+})(jQuery);
+
+
+(function($){
+	$.fn.labsSlider = function(){
+		var $slider = this;
+
+		$slider.slick();
 	}
 })(jQuery);
